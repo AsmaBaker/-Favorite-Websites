@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Details</title>
+  <link rel="stylesheet" href="./output.css" />
+</head>
+<body class="min-h-screen bg-slate-100 text-slate-800">
+
+  <header class="bg-indigo-600 text-white shadow">
+    <div class="mx-auto max-w-5xl px-4 py-5">
+      <h1 class="text-2xl font-bold">Website Details</h1>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-2xl px-4 py-8">
+    <a href="./index.html" class="mb-4 inline-block text-sm text-indigo-600 hover:underline">← Back to list</a>
+
+    <section data-details hidden class="rounded-2xl bg-white p-6 shadow">
+      <h2 data-field="name" class="mb-6 text-xl font-semibold" datafield="name"></h2>
+
+      <dl class="space-y-4 text-sm">
+        <div>
+          <dt class="text-slate-500" datafield="url">URL</dt>
+          <dd><a data-field="url" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline"></a></dd>
+        </div>
+
+        <div>
+          <dt class="text-slate-500" datafield="email">Email</dt>
+          <dd data-field="email"></dd>
+        </div>
+
+        <div>
+          <dt class="text-slate-500">Password</dt>
+          <dd class="flex items-center gap-3">
+            <span data-field="password" class="tracking-widest">••••••••</span>
+            <button type="button" data-toggle-password class="btn-edit">Show</button>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <p data-not-found hidden class="rounded-2xl bg-white p-6 text-center text-slate-500 shadow">
+      Website not found.
+    </p>
+  </main>
+
+  <script src="./details.js"></script>
+</body>
+</html>

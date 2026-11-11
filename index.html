@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favorite Websites</title>
+  <link rel="stylesheet" href="./output.css" />
+</head>
+<body class="min-h-screen bg-slate-100 text-slate-800">
+
+  <!-- Header -->
+  <header class="bg-indigo-600 text-white shadow">
+    <div class="mx-auto max-w-5xl px-4 py-5">
+      <h1 class="text-2xl font-bold">⭐ Favorite Websites</h1>
+      <p class="text-sm text-indigo-100">Manage your favorite websites and accounts</p>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-5xl space-y-8 px-4 py-8">
+
+    <!-- Form -->
+    <section class="rounded-2xl bg-white p-6 shadow">
+      <h2 class="mb-4 text-lg font-semibold">Add / Edit Website</h2>
+
+      <form data-form="website" class="grid gap-4 md:grid-cols-2" novalidate>
+        <div>
+          <label for="name" class="mb-1 block text-sm font-medium">Website Name</label>
+          <input name="name" id="name" type="text" placeholder="e.g. GitHub" class="input-field" />
+        </div>
+
+        <div>
+          <label for="url" class="mb-1 block text-sm font-medium">Website URL</label>
+          <input name="url" id="url" type="url" placeholder="https://github.com" class="input-field" />
+        </div>
+
+        <div>
+          <label for="email" class="mb-1 block text-sm font-medium">Email</label>
+          <input name="email" id="email" type="email" placeholder="you@example.com" class="input-field" />
+        </div>
+
+        <div>
+          <label for="password" class="mb-1 block text-sm font-medium">Password</label>
+          <input name="password" id="password" type="password" placeholder="••••••••" class="input-field" />
+        </div>
+
+        <div class="md:col-span-2 flex justify-end gap-3">
+          <button type="reset" class="btn bg-slate-200 text-slate-700 hover:bg-slate-300">Clear</button>
+          <button type="submit" class="btn-primary">Save Website</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Table -->
+    <section class="rounded-2xl bg-white p-6 shadow">
+      <div class="mb-4 flex items-center justify-between">
+        <h2 class="text-lg font-semibold">My Websites</h2>
+        <span data-count class="rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700">4 items</span>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-slate-50 text-xs uppercase text-slate-500">
+            <tr>
+              <th class="px-4 py-3">#</th>
+              <th class="px-4 py-3">Name</th>
+              <th class="px-4 py-3">URL</th>
+              <th class="px-4 py-3">Email</th>
+              <th class="px-4 py-3 text-center">Actions</th>
+            </tr>
+          </thead>
+
+          <tbody data-table="website" class="divide-y divide-slate-100">
+            <tr class="hover:bg-slate-50">
+              <td class="px-4 py-3">1</td>
+              <td class="px-4 py-3 font-medium">GitHub</td>
+              <td class="px-4 py-3"><a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">https://github.com</a></td>
+              <td class="px-4 py-3">ahmad@example.com</td>
+              <td class="px-4 py-3">
+                <div class="flex justify-center gap-2">
+                  <a href="./details.html?id=1" class="inline-flex items-center justify-center rounded-lg bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-700 transition hover:bg-indigo-200">Details</a>
+                  <button type="button" class="btn-edit">Edit</button>
+                  <button type="button" class="btn-delete">Delete</button>
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="./main.js" type="module"></script>
+
+</body>
+</html>

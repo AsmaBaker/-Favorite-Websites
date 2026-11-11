@@ -1,0 +1,22 @@
+{
+  "name": "fav_website_static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"vite",
+    "bulid":"vite bulid"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "just-validate": "^4.3.0",
+    "sweetalert2": "^11.26.25"
+  },
+  "devDependencies": {
+    "vite": "^8.3.8"
+  }
+}
